@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sofilan Shop - ระบบจัดการสต็อก</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body, #root { height: 100%; }
+      body {
+        font-family: 'Sarabun', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        --font-sans: 'Sarabun', sans-serif;
+        --color-background-primary: #ffffff;
+        --color-background-secondary: #f5f5f5;
+        --color-background-tertiary: #FFF8F0;
+        --color-text-primary: #3D2B1F;
+        --color-text-secondary: #7A5C44;
+        --color-border-tertiary: rgba(196,134,90,0.2);
+        --color-border-secondary: rgba(196,134,90,0.35);
+        --border-radius-md: 8px;
+        --border-radius-lg: 12px;
+      }
+      input, select, textarea, button {
+        font-family: 'Sarabun', sans-serif;
+        font-size: 13px;
+      }
+      input[type="text"], input[type="password"], input[type="number"], input[type="email"],
+      select, textarea {
+        border: 1.5px solid rgba(196,134,90,0.25);
+        border-radius: 9px;
+        padding: 8px 11px;
+        outline: none;
+        background: #FFF8F0;
+        color: #3D2B1F;
+        width: 100%;
+        transition: border-color 0.15s;
+      }
+      input:focus, select:focus, textarea:focus {
+        border-color: #F5A623;
+        box-shadow: 0 0 0 3px rgba(245,166,35,0.12);
+      }
+      button { cursor: pointer; }
+      ::-webkit-scrollbar { width: 5px; height: 5px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: rgba(196,134,90,0.3); border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: rgba(196,134,90,0.5); }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
