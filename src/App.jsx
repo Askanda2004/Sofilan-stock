@@ -330,12 +330,12 @@ function Login({ onLogin }) {
 
         <div style={{ marginBottom: 14 }}>
           <label style={{ fontSize: 12, color: T.textSecondary, display: "block", marginBottom: 5, fontWeight: 500 }}>ชื่อผู้ใช้</label>
-          <input value={username} onChange={e => setUsername(e.target.value)} placeholder="admin หรือ staff"
+          <input value={username} onChange={e => setUsername(e.target.value)} placeholder="Email"
             style={{ width: "100%", boxSizing: "border-box", borderRadius: 10, border: `1.5px solid ${T.border}`, padding: "9px 12px", fontSize: 13, color: T.textPrimary, outline: "none", background: T.bg }} />
         </div>
         <div style={{ marginBottom: 18 }}>
           <label style={{ fontSize: 12, color: T.textSecondary, display: "block", marginBottom: 5, fontWeight: 500 }}>รหัสผ่าน</label>
-          <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="รหัสผ่าน"
+          <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Passwoerd"
             style={{ width: "100%", boxSizing: "border-box", borderRadius: 10, border: `1.5px solid ${T.border}`, padding: "9px 12px", fontSize: 13, color: T.textPrimary, outline: "none", background: T.bg }}
             onKeyDown={e => e.key === "Enter" && handle()} />
         </div>
@@ -352,10 +352,10 @@ function Login({ onLogin }) {
         }}>
           เข้าสู่ระบบ
         </button>
-        <div style={{ marginTop: 14, fontSize: 11, color: T.textMuted, background: T.primaryLight, borderRadius: 8, padding: "8px 12px", border: `1px solid rgba(245,166,35,0.2)` }}>
+        {/* <div style={{ marginTop: 14, fontSize: 11, color: T.textMuted, background: T.primaryLight, borderRadius: 8, padding: "8px 12px", border: `1px solid rgba(245,166,35,0.2)` }}>
           <div>Admin: admin / admin123</div>
           <div>Staff: staff / staff123</div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -1125,11 +1125,11 @@ ${products.map(p => {
   };
 
   const resetData = () => {
-    if (!confirm("⚠️ ยืนยันการรีเซ็ตข้อมูลทั้งหมด?\nสินค้า หมวดหมู่ และประวัติจะกลับเป็นค่าเริ่มต้น")) return;
-    setProducts(INITIAL_PRODUCTS);
-    setCategories(INITIAL_CATEGORIES);
-    setHistory(INITIAL_HISTORY);
-    showToast("รีเซ็ตข้อมูลเรียบร้อยแล้ว");
+    if (!confirm("⚠️ ยืนยันการรีเซ็ตข้อมูลทั้งหมด?\nสินค้า หมวดหมู่ และประวัติจะถูกลบออกทั้งหมด")) return;
+    setProducts([]);
+    setCategories([]);
+    setHistory([]);
+    showToast("ลบข้อมูลทั้งหมดเรียบร้อยแล้ว");
   };
 
   const storageSize = (() => {
